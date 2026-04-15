@@ -67,7 +67,6 @@ app.post("/add/teacher", async (req, res) => {
   res.json(newTeacher);
 });
 
-// Add your SRV string, make sure that the database is called CSHteachers
 async function startServer() {
   await mongoose.connect("mongodb+srv://SE12:CSH2026@cluster0.ytvmkmf.mongodb.net/?appName=Cluster0");
 
