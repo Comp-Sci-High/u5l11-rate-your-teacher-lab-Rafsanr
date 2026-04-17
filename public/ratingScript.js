@@ -6,14 +6,16 @@ addForm.addEventListener("submit", async(event) => {
     event.preventDefault()
 
     const ratingSchema = new FormData(addForm)
-    const reqBody = Object.fromEntries(ratingSchema)
+    const requestBody = Object.fromEntries(ratingSchema)
+
+
 
     const response = await fetch("/add/rating", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify(reqBody),
+        body: JSON.stringify(requestBody),
     });
     window.location.href = "/ratings"
 })
